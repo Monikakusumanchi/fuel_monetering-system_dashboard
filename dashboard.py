@@ -12,7 +12,7 @@ import altair as alt
 st.set_page_config(page_title="Fuel Monetering System Dashboard")
 @st.cache
 def get_data_from_excel():
-    df=pd.read_csv('E:\samidha_SIH\datasets\dashboard.csv')
+    df=pd.read_csv('fuel_monetering-system_dashboard\dashboard.csv')
 #st.dataframe(df)
     df["year"]=pd.to_datetime(df["Time"]).dt.year
     return df
