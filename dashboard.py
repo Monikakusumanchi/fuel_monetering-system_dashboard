@@ -12,7 +12,7 @@ import altair as alt
 st.set_page_config(page_title="Fuel Monetering System Dashboard")
 @st.cache
 def get_data_from_excel():
-    df=pd.read_csv('E:\samidha_SIH\datasets\dashboard.csv')
+    df=pd.read_csv('dashboard.csv')
 #st.dataframe(df)
     df["year"]=pd.to_datetime(df["Time"]).dt.year
     return df
@@ -82,7 +82,7 @@ left_column,right_column =st.columns(2)
 left_column.plotly_chart(fig_fuelConsumptionByTime,use_container_width=True)
 right_column.plotly_chart(fig_fuelConsumptionByYear,use_container_width=True)
 
-df1=pd.read_csv('E:\samidha_SIH\datasets\indexed-dataFrame.csv')
+df1=pd.read_csv('indexed-dataFrame.csv')
 
 col1,col2=st.columns(2)
 
